@@ -368,7 +368,7 @@ const App = () => {
                              <div className="card-body">
                                  <h5 className="card-title project-title" id="project1-title">{texts[language].project1Title}</h5>
                                 <p className="card-text project-desc" id="project1-desc">{texts[language].project1Desc}</p>
-                                 <a href="#" className="btn btn-primary" id="project1-button">{texts[language].project1Button}</a>
+                                 <a href="https://github.com/silvacrac/EletroSYFA" className="btn btn-primary" id="project1-button">{texts[language].project1Button}</a>
                              </div>
                          </div>
                    </div>
@@ -378,7 +378,7 @@ const App = () => {
                             <div className="card-body">
                                <h5 className="card-title project-title" id="project2-title">{texts[language].project2Title}</h5>
                                  <p className="card-text project-desc" id="project2-desc">{texts[language].project2Desc}</p>
-                                 <a href="#" className="btn btn-primary" id="project2-button">{texts[language].project2Button}</a>
+                                 <a href="https://github.com/Felton7JE/Fundza/tree/master/flutter_front" className="btn btn-primary" id="project2-button">{texts[language].project2Button}</a>
                            </div>
                        </div>
                    </div>
@@ -388,7 +388,7 @@ const App = () => {
                             <div className="card-body">
                                <h5 className="card-title project-title" id="project3-title">{texts[language].project3Title}</h5>
                                  <p className="card-text project-desc" id="project3-desc">{texts[language].project3Desc}</p>
-                               <a href="#" className="btn btn-primary" id="project3-button">{texts[language].project3Button}</a>
+                               <a href="https://github.com/silvacrac/portControlvF" className="btn btn-primary" id="project3-button">{texts[language].project3Button}</a>
                             </div>
                        </div>
                    </div>
