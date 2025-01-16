@@ -1,3 +1,5 @@
+
+
 .App {
   text-align: center;
 }
@@ -35,4 +37,321 @@
   to {
     transform: rotate(360deg);
   }
+}
+/* Geral */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f4f4f9;
+  color: #333;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode {
+  background-color: #1a1a1a;
+  color: #fff;
+}
+
+/* Hero Section */
+.hero {
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/public/fotos/fundolkn.png') no-repeat center center/cover;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 4rem;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: .15em solid white;
+  animation: blink-caret .75s step-end infinite;
+  max-width: 90%;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: white; }
+}
+
+@media (max-width: 768px) {
+  .hero h1 {
+      font-size: 2.5rem;
+  }
+}
+
+/* Switches (Mode e Language) */
+.language-switch {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+.mode-switch {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+/* Card Hover Animation */
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s;
+}
+
+/* Animation Section */
+.animated-section {
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+}
+.animated-section.from-left {
+  transform: translateX(-50px);
+}
+.animated-section.from-right {
+  transform: translateX(50px);
+}
+.animated-section.from-bottom {
+  transform: translateY(50px);
+}
+.animated-section.show {
+  opacity: 1;
+  transform: translateX(0) translateY(0);
+}
+
+/* Slideshow */
+.slideshow-container {
+  position: relative;
+  max-width: 100%;
+  margin: auto;
+  overflow: hidden;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.slideshow-container .slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.slideshow-container .slide.active {
+  opacity: 1;
+}
+.slideshow-container img {
+  max-width: 80%;
+  max-height: 80%;
+  object-fit: contain;
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.4);
+}
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+}
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+}
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Certification Item */
+.certification-item {
+  display: flex;
+  align-items: flex-start;
+  padding: 15px;
+  border-bottom: 1px solid #eee;
+}
+.certification-item img {
+  width: 120px;
+  height: auto;
+  margin-right: 20px;
+}
+.certification-item p {
+  margin-bottom: 0;
+}
+.certification-item .description {
+  overflow: hidden;
+  white-space: pre-line;
+  border-right: .10em solid black;
+  animation: type-desc 3s steps(40, end) , blink-caret .75s step-end infinite;
+}
+@keyframes type-desc {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* Footer */
+footer {
+  background-color: #343a40;
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+  margin-top: 2rem;
+}
+
+/* Download CV */
+.download-cv {
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Skills Section */
+.skills-section {
+  margin-top: 30px;
+}
+.skill-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.skill-item img {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+.skill-item span {
+  font-size: 1.1rem;
+}
+
+/* Flag Icon */
+.flag-icon {
+  width: 25px;
+  height: auto;
+  margin-right: 5px;
+  border-radius: 3px;
+  vertical-align: middle;
+}
+
+/* Video Section */
+.video-section {
+  padding: 2rem 0;
+  text-align: center;
+}
+.video-gallery-container {
+  display: flex;
+  flex-direction: column;
+}
+@media(min-width: 768px){
+  .video-gallery-container {
+      flex-direction: row;
+  }
+  .video-section , #slideshow{
+      width: 50%;
+  }
+}
+.video-container {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+  padding-bottom: 56.25%; /* Proporção 16:9 */
+  height: 0;
+  overflow: hidden;
+}
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Memories Section */
+.memories-section {
+  padding: 2rem 0;
+  text-align: center;
+}
+.memory-slider {
+  max-width: 800px;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+}
+.memory-slider .slide {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 20px;
+  width: 100%;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.memory-slider .slide.active {
+  opacity: 1;
+  position: relative;
+}
+.memory-slider img {
+  width: 120px;
+  height: auto;
+  margin-right: 20px;
+}
+.memory-slider p {
+  margin-bottom: 0;
+}
+.memory-slider .slide .description {
+  overflow: hidden;
+  white-space: pre-line;
+  border-right: .10em solid black;
+  animation: type-desc 3s steps(40, end) , blink-caret .75s step-end infinite;
+}
+
+/* Button Animations */
+.hero .btn-primary {
+  transition: background-color 0.3s, color 0.3s;
+}
+.hero .btn-primary:hover {
+  background-color: #0056b3; /* Cor mais escura ao passar o mouse */
+}
+.hero .btn-primary.animated-btn {
+  animation: pulse-color 3s infinite;
+}
+@keyframes pulse-color {
+  0% { background-color: #007bff; color: white;}
+  50% { background-color: #0056b3; color:white;}
+  100% { background-color: #007bff; color:white; }
 }
